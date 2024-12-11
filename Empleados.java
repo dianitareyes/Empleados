@@ -104,6 +104,31 @@ public class Empleado {
         System.out.printf("Sueldo Primera Quincena: $%.2f\n", sueldoQuincenal[0]);
         System.out.printf("Sueldo Segunda Quincena: $%.2f\n", sueldoQuincenal[1]);
     }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+
+        while (continuar) {
+            Empleado empleado = new Empleado();
+
+            
+            empleado.ingresarDatos();
+
+           
+            empleado.calcularSueldo();
+
+            
+            empleado.mostrarInformacion();
+
+           
+            System.out.print("\n¿Desea registrar otro empleado? (si/no): ");
+            String respuesta = scanner.next();
+            continuar = respuesta.equalsIgnoreCase("si");
+        }
+
+        System.out.println("Programa finalizado. ¡Gracias!");
+    }
         
 
 }
