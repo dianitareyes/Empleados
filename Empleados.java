@@ -31,7 +31,7 @@ public class Empleado {
             }
         }
 
-          scanner.nextLine(); 
+        scanner.nextLine(); 
         while (true) {
             System.out.print("Ingrese el nombre del empleado: ");
             nombreEmpleado = scanner.nextLine();
@@ -41,6 +41,16 @@ public class Empleado {
                 System.out.println("Error: El nombre no puede estar vacío.");
             }
         } 
+
+        while (true) {
+            System.out.print("Ingrese el puesto (Empleado o Supervisor): ");
+            puesto = scanner.nextLine();
+            if (puesto.equalsIgnoreCase("Empleado") || puesto.equalsIgnoreCase("Supervisor")) {
+                break;
+            } else {
+                System.out.println("Error: El puesto debe ser 'Empleado' o 'Supervisor'.");
+            }
+        }
     }    
 
 }
