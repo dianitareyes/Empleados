@@ -76,7 +76,24 @@ public class Empleado {
                 }
             }
 
+            double pagoHorasExtras = (horasExtrasDiurnas * 50) + (horasExtrasNocturnas * 60);
+            sueldoQuincenal[0] = sueldoBase + pagoHorasExtras;
+            sueldoQuincenal[1] = sueldoBase; 
+
+        } else if (puesto.equalsIgnoreCase("Supervisor")) {
+            double sueldoBase = 8000;
+
+            
+            double deduccionInfonavit = sueldoBase * 0.002;
+            double deduccionSeguro = sueldoBase * 0.001;
+            double deduccionISR = sueldoBase * 0.016;
+
+            double totalDeducciones = deduccionInfonavit + deduccionSeguro + deduccionISR;
+            sueldoQuincenal[0] = sueldoBase - totalDeducciones; 
+            sueldoQuincenal[1] = sueldoBase - totalDeducciones; 
         }
+
+        
      }          
 
 }
