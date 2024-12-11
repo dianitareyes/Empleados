@@ -94,6 +94,16 @@ public class Empleado {
         }
 
         
-     }          
+    }  
+
+    public void mostrarInformacion() {
+        System.out.println("\n--- Información del Empleado ---");
+        System.out.println("ID: " + idEmpleado);
+        System.out.println("Nombre: " + nombreEmpleado);
+        System.out.println("Puesto: " + puesto);
+        System.out.printf("Sueldo Primera Quincena: $%.2f\n", sueldoQuincenal[0]);
+        System.out.printf("Sueldo Segunda Quincena: $%.2f\n", sueldoQuincenal[1]);
+    }
+        
 
 }
