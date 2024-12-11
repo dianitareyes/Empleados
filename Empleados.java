@@ -51,6 +51,32 @@ public class Empleado {
                 System.out.println("Error: El puesto debe ser 'Empleado' o 'Supervisor'.");
             }
         }
-    }    
+    }  
+     public void calcularSueldo() {
+        Scanner scanner = new Scanner(System.in);
+
+        if (puesto.equalsIgnoreCase("Empleado")) {
+            double sueldoBase = 5000;
+
+            
+            int horasExtrasDiurnas = 0, horasExtrasNocturnas = 0;
+            while (true) {
+                try {
+                    System.out.print("Ingrese las horas extras diurnas trabajadas: ");
+                    horasExtrasDiurnas = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Ingrese las horas extras nocturnas trabajadas: ");
+                    horasExtrasNocturnas = Integer.parseInt(scanner.nextLine());
+                    if (horasExtrasDiurnas >= 0 && horasExtrasNocturnas >= 0) {
+                        break;
+                    } else {
+                        System.out.println("Error: Las horas extras no pueden ser negativas.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Error: Debe ingresar un número válido.");
+                }
+            }
+
+        }
+     }          
 
 }
