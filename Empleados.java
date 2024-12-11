@@ -29,6 +29,17 @@ public class Empleado {
                 System.out.println("Error: Debe ingresar un número válido.");
                 scanner.next(); 
             }
+        }
+
+          scanner.nextLine(); 
+        while (true) {
+            System.out.print("Ingrese el nombre del empleado: ");
+            nombreEmpleado = scanner.nextLine();
+            if (!nombreEmpleado.trim().isEmpty()) {
+                break;
+            } else {
+                System.out.println("Error: El nombre no puede estar vacío.");
+            }
         } 
     }    
 
